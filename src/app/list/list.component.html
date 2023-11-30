@@ -1,0 +1,8 @@
+<form [formGroup]="stateForm">
+<h1>Drop down values</h1>
+    <select formControlName="selectedStateId" (change)="onStateChange()">
+        <option value="">Selected a state</option>
+        <option *ngFor="let state of states" value="state.id">{{state.stateName}}
+        </option>
+    </select>
+</form>
